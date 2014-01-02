@@ -1,5 +1,7 @@
 #!/bin/sh
 
+brew update
+
 # The best source control management tool
 brew install git
 
