@@ -62,3 +62,5 @@ set ignorecase
 " it is case sensitive, otherwise, it is not. For example, /The would find only 'The', 
 " while /the would find 'the' or 'The' etc.
 set smartcase
+" sets the default font and font size
+set guifont=Monaco:h16
