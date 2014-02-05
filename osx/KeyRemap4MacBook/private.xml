@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<root>
+  <list>
+    <item>
+      <name>Optimized Keyboard For The Win!</name>
+      <appendix>Features:</appendix>
+      <appendix>- capslock alone => escape (needs native osx modifier key capslock=>ctrl)</appendix>
+      <appendix>- capslock + another key => control_l (needs native osx modifier key capslock=>ctrl)</appendix>
+      <appendix>- escape => disable or forward delete</appendix>
+      <appendix>- force correct use of shift keys</appendix>
+      <appendix>- both shifts simultaneously => toggle pass-through mode</appendix>
+      <appendix>- shift (L/R) alone => parentheses (L/R)</appendix>
+      <appendix>- shift (L/R) + another key => shift (L/R)</appendix>
+      <appendix>- option (L/R) alone => curly braces (L/R)</appendix>
+      <appendix>- option (L/R) + another key => option (L/R)</appendix>
+      <appendix>- command (L/R) alone => home/end</appendix>
+      <appendix>- command (L/R) + another key => command (L/R)</appendix>
+      <appendix>- left control => hyper (Control + Shift + Option + Command for custom keyboard shortcuts)</appendix>
+
+      <!-- already provided by default KeyRemap4MacBook, but duplicated here to track in git -->
+      <item>
+        <name>Control_L => Escape (alone) or Control_L (+ another key)</name>
+        <appendix>(needs native osx modifier key capslock=>ctrl)</appendix>
+        <identifier>private.ctrl_l_to_ctrl_l_escape</identifier>
+
+        <autogen>__KeyOverlaidModifier__ KeyCode::CONTROL_L, KeyCode::CONTROL_L, KeyCode::ESCAPE</autogen>
+      </item>
+
+      <!-- already provided by default KeyRemap4MacBook, but duplicated here to track in git -->
+      <item>
+        <name>Escape => disable</name>
+        <appendix>(force yourself to use Control_L instead)</appendix>
+        <identifier>private.disable_escape</identifier>
+
+        <autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::VK_NONE</autogen>
+      </item>
+
+      <!-- already provided by default KeyRemap4MacBook, but duplicated here to track in git -->
+      <item>
+        <name>Escape => Forward delete</name>
+        <appendix>(force yourself to use Control_L instead)</appendix>
+        <identifier>private.escape_to_forward_delete</identifier>
+
+        <autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::FORWARD_DELETE</autogen>
+      </item>
+
+      <item>
+        <name>Force correct use of shift keys</name>
+        <identifier>private.force_correct_shifts</identifier>
+
+        <autogen>--KeyToKey-- KeyCode::BACKQUOTE,     ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_1,         ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_2,         ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_3,         ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_4,         ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_5,         ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+
+        <autogen>--KeyToKey-- KeyCode::Q,             ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::W,             ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::E,             ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::R,             ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::T,             ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+
+        <autogen>--KeyToKey-- KeyCode::A,             ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::S,             ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::D,             ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::F,             ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::G,             ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+
+        <autogen>--KeyToKey-- KeyCode::Z,             ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::X,             ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::C,             ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::V,             ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::B,             ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+
+        <autogen>--KeyToKey-- KeyCode::KEY_6,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_7,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_8,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_9,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::KEY_0,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::MINUS,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::EQUAL,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+
+        <autogen>--KeyToKey-- KeyCode::Y,             ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::U,             ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::I,             ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::O,             ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::P,             ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT,  ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::BACKSLASH,     ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        
+        <autogen>--KeyToKey-- KeyCode::H,             ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::J,             ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::K,             ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::L,             ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::SEMICOLON,     ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::QUOTE,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        
+        <autogen>--KeyToKey-- KeyCode::N,             ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::M,             ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::COMMA,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::DOT,           ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::SLASH,         ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::VK_NONE</autogen>
+      </item>
+
+      <item>
+        <name>Both shifts simultaneously => toggle pass-through mode</name>
+        <!-- identifier must start with "passthrough" -->
+        <identifier>passthrough.private_both_shifts</identifier>
+        <autogen>
+          __KeyToKey__
+          KeyCode::SHIFT_L, ModifierFlag::SHIFT_R,
+          KeyCode::VK_LOCK_ALL_FORCE_OFF,
+          KeyCode::VK_CONFIG_TOGGLE_notsave_passthrough,
+          Option::NOREPEAT,
+        </autogen>
+        <autogen>
+          __KeyToKey__
+          KeyCode::SHIFT_R, ModifierFlag::SHIFT_L,
+          KeyCode::VK_LOCK_ALL_FORCE_OFF,
+          KeyCode::VK_CONFIG_TOGGLE_notsave_passthrough,
+          Option::NOREPEAT,
+        </autogen>
+      </item>
+
+      <item>
+        <name>Shift => Parentheses</name>
+        <appendix>Shift (L/R) alone => Parentheses (L/R)</appendix>
+        <appendix>Shift (L/R) + another key => Shift (L/R)</appendix>
+
+        <identifier>private.shifts_to_parens</identifier>
+
+        <!-- This is the basic mapping. -->
+        <autogen>--KeyOverlaidModifier-- KeyCode::SHIFT_L, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::SHIFT_L, KeyCode::KEY_9, ModifierFlag::SHIFT_L</autogen>
+        <autogen>--KeyOverlaidModifier-- KeyCode::SHIFT_R, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::SHIFT_R, KeyCode::KEY_0, ModifierFlag::SHIFT_L</autogen>
+
+        <!-- Remap the "rolls" of () and )( because it's too easy to hit one
+        before finishing the other, and there's no other reason to be
+        pressing both shift keys at once anyway -->
+        <autogen>--KeyToKey-- KeyCode::SHIFT_R, ModifierFlag::SHIFT_L, KeyCode::KEY_9, ModifierFlag::SHIFT_L, KeyCode::KEY_0, ModifierFlag::SHIFT_L</autogen>
+        <autogen>--KeyToKey-- KeyCode::SHIFT_L, ModifierFlag::SHIFT_R, KeyCode::KEY_0, ModifierFlag::SHIFT_L, KeyCode::KEY_9, ModifierFlag::SHIFT_L</autogen>
+
+        <!-- Remap Rshift+Space to ') ', because when typing an end paren and
+        then a space I tend to hit space before I let go of rshift. -->
+        <autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::SHIFT_R, KeyCode::KEY_0, ModifierFlag::SHIFT_L, KeyCode::SPACE</autogen>
+      </item>
+
+      <item>
+        <name>Option => Curly braces</name>
+        <appendix>Option (L/R) alone => Curly braces (L/R)</appendix>
+        <appendix>Option (L/R) + another key => Option (L/R)</appendix>
+
+        <identifier>private.options_to_curly_braces</identifier>
+
+        <!-- This is the basic mapping. -->
+        <autogen>--KeyOverlaidModifier-- KeyCode::OPTION_L, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::OPTION_L, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L</autogen>
+        <autogen>--KeyOverlaidModifier-- KeyCode::OPTION_R, ModifierFlag::OPTION_R | ModifierFlag::NONE, KeyCode::OPTION_R, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L</autogen>
+
+        <!-- Remap the "rolls" of {} and }{ because it's too easy to hit one
+        before finishing the other, and there's no other reason to be
+        pressing both keys at once anyway -->
+        <autogen>--KeyToKey-- KeyCode::OPTION_R, ModifierFlag::OPTION_L, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L</autogen>
+        <autogen>--KeyToKey-- KeyCode::OPTION_L, ModifierFlag::OPTION_R, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L</autogen>
+      </item>
+
+      <item>
+        <name>Command => Home/End</name>
+        <appendix>Command (L/R) alone => Home/End</appendix>
+        <appendix>Command (L/R) + another key => Command (L/R)</appendix>
+
+        <identifier>private.commands_to_home_end</identifier>
+
+        <!-- This is the basic mapping. -->
+        <autogen>--KeyOverlaidModifier-- KeyCode::COMMAND_L, ModifierFlag::COMMAND_L | ModifierFlag::NONE, KeyCode::COMMAND_L, KeyCode::HOME, ModifierFlag::NONE</autogen>
+        <autogen>--KeyOverlaidModifier-- KeyCode::COMMAND_R, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::COMMAND_R, KeyCode::END, ModifierFlag::NONE</autogen>
+      </item>
+
+      <item>
+        <name>Left control => Hyper (Control + Shift + Option + Command for custom keyboard shortcuts)</name>
+        <identifier>private.left_control_to_hyper</identifier>
+
+        <autogen>
+          --KeyToKey--
+          KeyCode::F19,
+
+          KeyCode::COMMAND_L,
+          ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L
+        </autogen>
+      </item>
+    </item>
+  </list>
+</root>

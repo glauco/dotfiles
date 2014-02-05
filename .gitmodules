@@ -1,0 +1,6 @@
+[submodule "osx/iTerm2/base16-iterm2"]
+	path = osx/iTerm2/base16-iterm2
+	url = git@github.com:chriskempson/base16-iterm2.git
+[submodule "vim/bundle/vundle"]
+	path = vim/bundle/vundle
+	url = https://github.com/gmarik/vundle.git
