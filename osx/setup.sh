@@ -15,6 +15,9 @@ install_homebrew_casks () {
     # Install KeyRemap4Macbook
     brew cask install keyremap4macbook
 
+    # Install PCKeyboardHack
+    brew cask install pckeyboardhack
+
     info 'homebrew casks installed'
 }
 
