@@ -4,6 +4,11 @@ PATH=/usr/local/bin:$PATH
 # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/.rvm/bin
 
+set TERM="xterm"
+
+# Creates an alias for tmux to enable 256 colors
+alias tmux="tmux -2"
+
 # Executes TMUX as soon as ZSH starts
 if [[ ! $TERM =~ screen ]]; then
   exec tmux

@@ -1,0 +1,2 @@
+# color
+set -g default-terminal "xterm"
