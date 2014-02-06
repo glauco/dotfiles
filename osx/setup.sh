@@ -1,3 +1,13 @@
+install_homebrew () {
+    brew update
+    brew install gdbm
+    brew install pcre
+    brew install git
+    brew install zsh
+    brew install vim
+    brew install tmux
+}
+
 
 install_homebrew_casks () {
     info 'installing homebrew casks'
@@ -157,6 +167,7 @@ install_keyremap4macbook_config () {
     done
 }
 
+install_homebrew
 install_homebrew_casks
 install_vim_powerline_fonts
 install_keyremap4macbook_config

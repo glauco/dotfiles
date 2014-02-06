@@ -10,6 +10,4 @@ set TERM="xterm"
 alias tmux="tmux -2"
 
 # Executes TMUX as soon as ZSH starts
-if [[ ! $TERM =~ screen ]]; then
-  exec tmux
-fi
+if [ "$TMUX" = "" ]; then tmux; fi
