@@ -12,6 +12,9 @@ install_homebrew_casks () {
     # Install alfred
     brew cask install alfred
 
+    # Install KeyRemap4Macbook
+    brew cask install keyremap4macbook
+
     info 'homebrew casks installed'
 }
 
