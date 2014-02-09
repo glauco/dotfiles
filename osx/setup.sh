@@ -4,7 +4,7 @@ install_homebrew () {
     brew install pcre
     brew install git
     brew install zsh
-    brew install vim
+    brew install --HEAD vim
     brew install tmux
 }
 
