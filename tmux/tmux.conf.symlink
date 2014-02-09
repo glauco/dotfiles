@@ -1,2 +1,86 @@
+# Set the prefix to ^A.
+unbind C-b
+set -g prefix ^A
+
+# Allows us to use C-a a <command> to send commands to a TMUX session inside 
+# another TMUX session
+bind-key a send-prefix
+
 # color
 set -g default-terminal "xterm"
+
+# Start numbering at 1
+set -g base-index 1
+
+# Rather than constraining window size to the maximum size of any client 
+# # connected to the *session*, constrain window size to the maximum size of any 
+# # client connected to *that window*. Much more reasonable.
+setw -g aggressive-resize on
+
+# Activity monitoring: indicator when activity happened on non-active window
+setw -g monitor-activity on
+# but no verbose message about activity
+set -g visual-activity off
+
+# Make the active pane more visible
+set -g pane-border-bg default
+set -g pane-border-fg default
+set -g pane-active-border-bg default
+set -g pane-active-border-fg red
+
+# Make the active window's name stand out
+set -g status-bg green
+setw -g window-status-current-fg red
+setw -g window-status-current-bg black
+
+# Use color to indicate activity in a background window
+# (Note this is inverted, fg means bg and vice versa.)
+setw -g window-status-activity-fg green
+setw -g window-status-activity-bg red
+
+# Show status line messages for 5 second
+set -g display-time 5000
+
+# Show pane numbers for 2 second
+set -g display-panes-time 2000
+
+# Enable mouse support. Can be temporarily turned off in iTerm2 by
+# pressing option (aka alt)
+set -g mode-mouse on
+set -g mouse-resize-pane on
+set -g mouse-select-pane on
+set -g mouse-select-window on
+
+# Set status fields
+set -g status-left ''
+set -g status-right '%H:%M %d-%b'
+
+# auto window rename
+set-window-option -g automatic-rename on
+
+# allows for faster key repetition
+set -s escape-time 0
+
+# hjkl pane traversal
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+
+# HJKL pane resize
+bind-key -r H resize-pane -L
+bind-key -r J resize-pane -D
+bind-key -r K resize-pane -U
+bind-key -r L resize-pane -R
+
+# bind R to reload config
+bind R source-file ~/.tmux.conf \; display-message "Config reloaded"
+
+# Split windows similar to vim
+bind-key v split-window -h
+bind-key ^v split-window -h
+bind-key s split-window
+bind-key ^s split-window
+
+# Restore the binding to choose-tree
+bind-key S choose-tree
