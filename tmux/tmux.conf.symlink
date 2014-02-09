@@ -62,9 +62,14 @@ set-window-option -g automatic-rename on
 set -s escape-time 0
 
 # hjkl pane traversal
+setw -g mode-keys vi
+unbind-key h
 bind-key h select-pane -L
+unbind-key j
 bind-key j select-pane -D
+unbind-key k
 bind-key k select-pane -U
+unbind-key l
 bind-key l select-pane -R
 
 # HJKL pane resize
@@ -84,3 +89,6 @@ bind-key ^s split-window
 
 # Restore the binding to choose-tree
 bind-key S choose-tree
+
+# it will automatically copy a handful of useful environment variables into new shells from the parent environment
+set -g update-environment -r
