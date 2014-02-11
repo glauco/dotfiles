@@ -6,6 +6,7 @@ install_homebrew () {
     brew install zsh
     brew install --HEAD vim
     brew install tmux
+    brew install reattach-to-user-namespace 
 }
 
 
