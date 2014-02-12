@@ -1,9 +1,13 @@
 install_homebrew () {
     brew update
+    brew upgrade
+    
     brew install gdbm
     brew install pcre
     brew install git
     brew install zsh
+    
+    brew unlink vim
     brew install --HEAD vim
     brew install tmux
     brew install reattach-to-user-namespace 
