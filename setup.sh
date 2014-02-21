@@ -1,4 +1,8 @@
 #!/bin/sh
+
+sh homebrew/install.sh
+sh ansible/install.sh
+
 DOTFILES_ROOT="$HOME/github/dotfiles"
 
 set -e
