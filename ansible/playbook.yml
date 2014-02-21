@@ -3,6 +3,7 @@
 
   vars:
     applications:
+      - iterm2
       - google-chrome
       - qlcolorcode 
       - qlstephen 
