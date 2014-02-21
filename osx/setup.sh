@@ -1,41 +1,3 @@
-install_homebrew () {
-    brew update
-    brew upgrade
-    
-    brew install gdbm
-    brew install pcre
-    brew install git
-    brew install zsh
-    
-    brew unlink vim
-    brew install --HEAD vim
-    brew install tmux
-    brew install reattach-to-user-namespace 
-}
-
-
-install_homebrew_casks () {
-    info 'installing homebrew casks'
-    brew tap phinze/cask
-    brew install brew-cask
-    # See https://github.com/sindresorhus/quick-look-plugins
-    brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql suspicious-package
-    
-    # Install mono
-    brew cask install mono-mdk mono-mre xamarin-studio
-
-    # Install alfred
-    brew cask install alfred
-
-    # Install KeyRemap4Macbook
-    brew cask install keyremap4macbook
-
-    # Install PCKeyboardHack
-    brew cask install pckeyboardhack
-
-    info 'homebrew casks installed'
-}
-
 install_vim_powerline_fonts () {
     info 'installing vim powerline fonts'
 
@@ -172,7 +134,5 @@ install_keyremap4macbook_config () {
     done
 }
 
-install_homebrew
-install_homebrew_casks
 install_vim_powerline_fonts
 install_keyremap4macbook_config
