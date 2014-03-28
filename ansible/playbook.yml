@@ -28,6 +28,7 @@
       - vim
       - tmux
       - zsh
+      - zsh-completion
       - reattach-to-user-namespace
 
   tasks:
@@ -61,3 +62,7 @@
       shell: brew install --HEAD {{ item }}
       with_items: libraries
       when: "item not in installed_libraries.results | map(attribute='stdout')" 
+
+    - name: Install oh-my-zsh
+      shell: curl -L http://install.ohmyz.sh | sh
+      ignore_errors: false
