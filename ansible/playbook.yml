@@ -22,13 +22,22 @@
       - transmission
 
     libraries:
-      - git
+      - ant
       - curl
-      - wget
-      - vim
+      - git
+      - gradle
+      - jenv
+      - maven
+      - openssl
+      - postgresql
+      - reattach-to-user-namespace
+      - sqlite
       - tmux
+      - tomcat  
+      - vim
+      - wget
       - zsh
-      - zsh-completion
+      - zsh-completions
       - reattach-to-user-namespace
 
   tasks:
