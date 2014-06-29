@@ -1,0 +1,31 @@
+---
+- name: Install RVM
+  action: shell curl -sSL https://get.rvm.io | bash -s stable
+
+- name: Install Ruby 2.1
+  action: shell rvm install 2.1
+
+- name: Set Ruby 2.1 as default
+  action: shell rvm use --default 2.1
+
+- name: Set gem source
+  action: shell gem source --add https://rubygems.org
+
+- name: Update gems
+  action: shell gem update --system
+
+- name: Install gems
+  action: shell gem install {{ item }}
+  with_items:
+    - jekyll
+    - pg
+    - pry
+    - rack
+    - rake
+    - rspec
+    - sinatra
+    - sqlite3
+    - thor
+    - unicorn
+ 
+
