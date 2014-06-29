@@ -5,6 +5,7 @@
 - name: Install libraries with Homebrew
   homebrew: name={{ item }} state=latest
   with_items:
+    - ack
     - ant
     - brew-cask
     - curl

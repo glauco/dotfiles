@@ -23,7 +23,7 @@ set history=1000
 set title
 
 " better backspace
-set backspace=indent,eol,start 
+set backspace=indent,eol,start
 
 " determines the minimum number of screen lines that you would like above and below the cursor.
 set scrolloff=5
@@ -37,7 +37,7 @@ filetype off
 " Plug-ins
 " ##############################################################################
 
-set rtp+=~/.vim/bundle/Vundle.vim 
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
@@ -67,6 +67,25 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'bling/vim-airline'
 
+Plugin 'kien/ctrlp.vim'
+
+Plugin 'mileszs/ack.vim'
+
+Plugin 'ddollar/nerdcommenter'
+
+Plugin 'tpope/vim-unimpaired'
+
+Plugin 'ervandew/supertab'
+
+Plugin 'MarcWeber/vim-addon-mw-utils'
+
+Plugin 'garbas/vim-snipmate'
+
+Plugin 'Lokaltog/vim-easymotion'
+
+Plugin 'bronson/vim-trailing-whitespace'
+
+
 call vundle#end()
 " Automatically detect file types
 filetype plugin indent on
@@ -79,7 +98,7 @@ filetype plugin indent on
 " enables syntax highlight
 syntax enable
 
-set ttimeoutlen=50 
+set ttimeoutlen=50
 let g:airline_powerline_fonts=1
 set termencoding=utf-8
 let g:airline_theme='powerlineish'
