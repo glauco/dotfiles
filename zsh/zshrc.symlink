@@ -7,6 +7,9 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
+# Adds GID scripts to the PATH
+PATH=/Users/gvinici/Projects/gid/brazil-build/scripts:$PATH
+
 # Fix issue with homebrew and node
 PATH=/usr/local/bin:$PATH
 
