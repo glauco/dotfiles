@@ -1,0 +1,60 @@
+---
+- name: Update Homebrew
+  homebrew: update_homebrew=yes
+
+- name: Install libraries with Homebrew
+  homebrew: name={{ item }} state=latest
+  with_items:
+    - ant
+    - brew-cask
+    - curl
+    - git
+    - gradle
+    - ivy
+    - jenv
+    - maven
+    - openssl
+    - postgresql
+    - reattach-to-user-namespace
+    - sqlite
+    - tmux
+    - tomcat  
+    - tree
+    - unrar
+    - vim
+    - wget
+    - zsh
+    - zsh-completions
+
+- name: Tap into the Homebrew Cask Beta apps
+  homebrew_tap: tap=caskroom/versions state=present
+
+- name: Install libraries with Homebrew Cask
+  homebrew_cask: name={{ item }} state=present
+  with_items:
+    - alfred
+    - betterzipql
+    - caffeine
+    - dropbox
+    - google-chrome
+    - iterm2
+    - keyremap4macbook
+    - libreoffice
+    - lighttable
+    - limechat
+    - mono-mdk
+    - mono-mre
+    - qlcolorcode 
+    - qlmarkdown 
+    - qlprettypatch 
+    - qlstephen 
+    - quicklook-csv 
+    - quicklook-json 
+    - screenhero
+    - skitch
+    - suspicious-package
+    - transmission
+    - virtualbox
+    - vagrant
+    - vagrant-manager
+    - xamarin-studio

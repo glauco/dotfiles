@@ -1,0 +1,5 @@
+- hosts: targets
+  tasks:
+    - include: tasks/dotfiles.yml
+    - include: tasks/homebrew.yml
+    - include: tasks/playbooks.yml

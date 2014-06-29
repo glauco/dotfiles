@@ -12,5 +12,5 @@ fi
 if test $(which ansible)
 then
   echo '[ Running Ansible Playbook ]'
-  ansible-playbook ansible/playbook.yml -i ansible/hosts
+  ansible-playbook -i playbooks/inventory playbooks/macosx.yml
 fi
