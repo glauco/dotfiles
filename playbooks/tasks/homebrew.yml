@@ -2,6 +2,12 @@
 - name: Update Homebrew
   homebrew: update_homebrew=yes
 
+- name: Add Brew Cask Tap
+  action: shell brew tap caskroom/cask
+
+- name: Add Jenv Tap
+  action: shell brew tap jenv/jenv
+
 - name: Install libraries with Homebrew
   homebrew: name={{ item }} state=latest
   with_items:
@@ -19,7 +25,7 @@
     - reattach-to-user-namespace
     - sqlite
     - tmux
-    - tomcat  
+    - tomcat
     - tree
     - unrar
     - vim
@@ -45,12 +51,12 @@
     - limechat
     - mono-mdk
     - mono-mre
-    - qlcolorcode 
-    - qlmarkdown 
-    - qlprettypatch 
-    - qlstephen 
-    - quicklook-csv 
-    - quicklook-json 
+    - qlcolorcode
+    - qlmarkdown
+    - qlprettypatch
+    - qlstephen
+    - quicklook-csv
+    - quicklook-json
     - screenhero
     - skitch
     - suspicious-package

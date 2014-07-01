@@ -25,7 +25,7 @@ function run_ansible() {
 }
 
 function grant_execution_permissions() {
-  chmod +x playbook/inventory
+  sh -c "chmod -x playbooks/inventory"
 }
 
 export -f install_homebrew
