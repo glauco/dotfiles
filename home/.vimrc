@@ -1,4 +1,3 @@
-" A
 " ##############################################################################
 " Defaults
 " ##############################################################################
@@ -6,6 +5,7 @@
 " necessary for lots of cool vim things
 set nocompatible
 
+" always display the status line
 set laststatus=2
 
 set wildmenu
@@ -22,14 +22,11 @@ set history=1000
 " enable setting title
 set title
 
-" better backspace
+" backspace over everything in insert mode
 set backspace=indent,eol,start
 
 " determines the minimum number of screen lines that you would like above and below the cursor.
 set scrolloff=5
-
-" only selects the text, keeping the line numbers out of the picture
-" set mouse=a
 
 filetype off
 
@@ -77,12 +74,14 @@ Plugin 'tpope/vim-unimpaired'
 
 Plugin 'ervandew/supertab'
 
+" this library provides some utility functions
+Plugin 'vim-scripts/tlib'
 Plugin 'MarcWeber/vim-addon-mw-utils'
-
 Plugin 'garbas/vim-snipmate'
 
 Plugin 'Lokaltog/vim-easymotion'
 
+" this plugin causes all trailing whitespace to be highlighted in red.
 Plugin 'bronson/vim-trailing-whitespace'
 
 

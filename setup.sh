@@ -24,14 +24,21 @@ function run_ansible() {
   sh playbooks/install.sh
 }
 
+function grant_execution_permissions() {
+  chmod +x playbook/inventory
+}
+
 export -f install_homebrew
 export -f install_ansible
+export -f grant_execution_permissions
 export -f run_ansible
 
 install_homebrew
 install_ansible
+grant_execution_permissions
 run_ansible
 
 unset run_ansible
+unset grant_execution_permissions
 unset install_ansible
 unset install_homebrew
