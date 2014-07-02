@@ -2,11 +2,11 @@
 - name: Install RVM
   action: shell curl -sSL https://get.rvm.io | bash -s stable
 
-- name: Install Ruby 2.1
-  action: shell rvm install 2.1
+- name: Install Ruby
+  action: shell rvm install ruby-2.1.2
 
-- name: Set Ruby 2.1 as default
-  action: shell rvm use --default 2.1
+- name: Set new Ruby as default
+  action: shell rvm use --default ruby-2.1.2
 
 - name: Set gem source
   action: shell gem source --add https://rubygems.org
@@ -27,5 +27,3 @@
     - sqlite3
     - thor
     - unicorn
- 
-
