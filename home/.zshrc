@@ -1,8 +1,8 @@
-# Vi mode
-bindkey -v
-
 # Docker settings
 export DOCKER_HOST=tcp://192.168.59.103:2375
+# By default, there is a 0.4 second delay after you hit the <ESC>.
+# Reducing this delay to 0.1 seconds.
+export KEYTIMEOUT=1
 
 # aliases
 alias p=pushd
@@ -82,7 +82,7 @@ alias tmux="tmux -2"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=()
+plugins=(vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
