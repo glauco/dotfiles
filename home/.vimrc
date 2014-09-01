@@ -124,7 +124,7 @@ set modelines=0
 set shiftwidth=2
 
 " limits syntax highlighting at character 128. Long lines slows down the world
-set synmaxcol=128
+set synmaxcol=228
 
 " If your terminal scrolls very slowly, but redrawing is not slow, this will make Vim redraw the
 " screen instead of scrolling, when there are more than 3 lines to be scrolled.

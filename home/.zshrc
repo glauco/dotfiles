@@ -1,3 +1,13 @@
+# Vi mode
+bindkey -v
+
+# Docker settings
+export DOCKER_HOST=tcp://192.168.59.103:2375
+
+# aliases
+alias p=pushd
+alias o=popd
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -7,8 +17,9 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
-# Adds GID scripts to the PATH
-PATH=/Users/gvinici/Projects/gid/brazil-build/scripts:$PATH
+# Adds ectool to the PATH
+export COMMANDER_SERVER="commander.gapinc.dev"
+PATH=$PATH:/opt/electriccloud/electriccommander/bin
 
 # Fix issue with homebrew and node
 PATH=/usr/local/bin:$PATH
@@ -98,3 +109,4 @@ source $ZSH/oh-my-zsh.sh
 # Add jEnv to the PATH
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
