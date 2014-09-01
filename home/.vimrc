@@ -84,6 +84,8 @@ Plugin 'Lokaltog/vim-easymotion'
 " this plugin causes all trailing whitespace to be highlighted in red.
 Plugin 'bronson/vim-trailing-whitespace'
 
+" help you stop repeating the basic movement keys
+Plugin 'takac/vim-hardtime'
 
 call vundle#end()
 " Automatically detect file types
@@ -222,3 +224,5 @@ set term=screen-256color
 
 " Remap NERDTreeToggle to Control-e
 map <leader>1 :NERDTreeToggle<CR>
+
+let g:hardtime_default_on=1
