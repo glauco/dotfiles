@@ -2,7 +2,7 @@
 
 if test ! $(which ansible)
 then
-  echo '[ Updating Homebrew Package List ]'  
+  echo '[ Updating Homebrew Package List ]'
   brew update
 
   echo '[ Installing Ansible ]'

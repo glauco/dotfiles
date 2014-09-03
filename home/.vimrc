@@ -87,6 +87,8 @@ Plugin 'bronson/vim-trailing-whitespace'
 " help you stop repeating the basic movement keys
 Plugin 'takac/vim-hardtime'
 
+Plugin 'chriskempson/vim-tomorrow-theme'
+
 call vundle#end()
 " Automatically detect file types
 filetype plugin indent on
@@ -100,9 +102,13 @@ filetype plugin indent on
 syntax enable
 
 set ttimeoutlen=50
-let g:airline_powerline_fonts=1
-set termencoding=utf-8
-let g:airline_theme='powerlineish'
+""""""""""""""""""""""""""""""
+" airline
+"""""""""""""""""""""""""""""""
+let g:airline_enable_branch     = 1
+let g:airline_enable_syntastic  = 1
+let g:airline_powerline_fonts   = 1
+let g:airline_theme='tomorrow'
 
 filetype plugin indent on
 
@@ -213,7 +219,7 @@ set autoindent
 set background=dark
 
 " set color scheme
-colorscheme jellybeans
+colorscheme Tomorrow-Night-Eighties
 
 " set term to 256 colors
 set term=screen-256color
