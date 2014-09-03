@@ -1,6 +1,6 @@
 ---
-- name: Install oh-my-zsh
-  git: repo=https://github.com/robbyrussell/oh-my-zsh.git dest=~/.oh-my-zsh
+- name: Install prezto
+  git: repo=https://github.com/sorin-ionescu/prezto.git dest=~/.zprezto
 
 - name: Symlink my dotfiles
   file: src=~/github/dotfiles/home/{{ item }}
