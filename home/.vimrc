@@ -89,6 +89,10 @@ Plugin 'takac/vim-hardtime'
 
 Plugin 'chriskempson/vim-tomorrow-theme'
 
+Plugin 'tmhedberg/matchit'
+
+Plugin 'fatih/vim-go'
+
 call vundle#end()
 " Automatically detect file types
 filetype plugin indent on

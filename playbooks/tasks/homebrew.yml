@@ -5,20 +5,21 @@
 - name: Add Brew Cask Tap
   action: shell brew tap caskroom/cask
 
-- name: Add Jenv Tap
-  action: shell brew tap jenv/jenv
-
 - name: Install libraries with Homebrew
   homebrew: name={{ item }} state=latest
   with_items:
     - ack
+    - ansible
     - ant
+    - autoconf
+    - automake
+    - boot2docker
     - brew-cask
     - curl
     - git
+    - gnu-sed
     - gradle
     - ivy
-    - jenv
     - maven
     - openssl
     - postgresql
@@ -39,30 +40,14 @@
 - name: Install libraries with Homebrew Cask
   homebrew_cask: name={{ item }} state=present
   with_items:
-    - alfred
-    - betterzipql
-    - caffeine
     - dropbox
+    - eclipse-ide
+    - firefox
     - google-chrome
     - intellij-idea
     - iterm2
-    - keyremap4macbook
-    - libreoffice
-    - lighttable
-    - limechat
-    - mono-mdk
-    - mono-mre
-    - qlcolorcode
-    - qlmarkdown
-    - qlprettypatch
-    - qlstephen
-    - quicklook-csv
-    - quicklook-json
-    - screenhero
     - skitch
-    - suspicious-package
     - transmission
     - virtualbox
     - vagrant
     - vagrant-manager
-    - xamarin-studio
