@@ -40,6 +40,7 @@
 - name: Install libraries with Homebrew Cask
   homebrew_cask: name={{ item }} state=present
   with_items:
+    - 1password
     - dropbox
     - eclipse-ide
     - firefox
