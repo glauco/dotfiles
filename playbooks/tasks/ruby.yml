@@ -1,20 +1,20 @@
 ---
-- name: Install RVM
+- name: Installing RVM
   action: shell curl -sSL https://get.rvm.io | bash -s stable
 
-- name: Install Ruby
-  action: shell rvm install ruby-2.1.2
+- name: Installing Ruby
+  action: shell rvm install ruby-2.2.0
 
-- name: Set new Ruby as default
-  action: shell rvm use --default ruby-2.1.2
+- name: Setting new Ruby as system default
+  action: shell rvm use --default ruby-2.2.0
 
-- name: Set gem source
+- name: Setting gem source as rubygems.org
   action: shell gem source --add https://rubygems.org
 
-- name: Update gems
+- name: Updating system gems
   action: shell gem update --system
 
-- name: Install gems
+- name: Installing useful gems
   action: shell gem install {{ item }}
   with_items:
     - jekyll

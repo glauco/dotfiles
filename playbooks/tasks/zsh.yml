@@ -1,0 +1,12 @@
+---
+- name: Updating Homebrew
+  homebrew: update_homebrew=yes
+
+- name: Installing zsh
+  homebrew: name=zsh state=latest
+
+- name: Installing prezto
+  git: repo=https://github.com/sorin-ionescu/prezto.git dest=~/.zprezto
+
+- name: Setting zsh as the default shell
+  command: chsh -s /bin/zsh

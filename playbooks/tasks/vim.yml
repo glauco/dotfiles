@@ -1,0 +1,12 @@
+---
+- name: Updating Homebrew
+  homebrew: update_homebrew=yes
+
+- name: Installing zsh
+  homebrew: name=vim state=latest
+
+- name: Cloning Vundle
+  git: repo=https://github.com/gmarik/Vundle.vim.git dest=~/.vim/bundle/Vundle.vim
+
+- name: Installing VIM plugins
+  command: vim +VundleInstall! +qall

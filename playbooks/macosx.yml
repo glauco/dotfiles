@@ -1,6 +1,0 @@
-- hosts: targets
-  tasks:
-    - include: tasks/dotfiles.yml
-    - include: tasks/homebrew.yml
-    - include: tasks/software-updates.yml
-    - include: tasks/mac-os-x-configurations.yml

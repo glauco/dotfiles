@@ -1,20 +1,15 @@
 ---
-- name: Install prezto
-  git: repo=https://github.com/sorin-ionescu/prezto.git dest=~/.zprezto
-
-- name: Symlink my dotfiles
+- name: Symlinking dotfiles
   file: src=~/github/dotfiles/home/{{ item }}
         dest=~/{{ item }}
         state=link
         force=yes
   with_items:
-    - .vimrc
-    - .zshrc
-    - .gitignore
     - .gitconfig
-
-- name: Clone Vundle
-  git: repo=https://github.com/gmarik/Vundle.vim.git dest=~/.vim/bundle/Vundle.vim
-
-- name: Install VIM plugins
-  command: vim +PluginInstall! +qall
+    - .vimrc
+    - .zlogin
+    - .zlogout
+    - .zpreztorc
+    - .zprofile
+    - .zshenv
+    - .zshrc

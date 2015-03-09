@@ -1,3 +1,0 @@
----
-- name: Install all updates available
-  command: softwareupdate -i -a

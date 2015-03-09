@@ -1,66 +1,63 @@
 ---
-- name: Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
+- name: Enabling full keyboard access for all controls (e.g. enable Tab in modal dialogs)
   command: defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
-- name: Enable the 2D Dock
+- name: Enabling the 2D dock
   command: defaults write com.apple.dock no-glass -bool true
 
-- name: Automatically hide and show the Dock
+- name: Automatically hide and show the dock
   command: defaults write com.apple.dock autohide -bool true
 
-- name: Make Dock icons of hidden applications translucent
+- name: Making dock icons of hidden applications translucent
   command: defaults write com.apple.dock showhidden -bool true
 
-- name: Allow quitting Finder via âŒ˜ + Q; doing so will also hide desktop icons
+- name: Allowing quit command in Finder via âŒ˜ + Q
   command: defaults write com.apple.finder QuitMenuItem -bool true
 
-- name: Disable window animations and Get Info animations in Finder
+- name: Disabling window animations and Get Info animations in Finder
   command: defaults write com.apple.finder DisableAllAnimations -bool true
 
-- name: Show all filename extensions in Finder
+- name: Showing all filename extensions in Finder
   command: defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-- name: Use current directory as default search scope in Finder
+- name: Using current directory as default search scope in Finder
   command: defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
-- name: Expand save panel by default
+- name: Expanding save panel by default
   command: defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
-- name: Disable press-and-hold for keys in favor of key repeat
+- name: Disabling press-and-hold for keys in favor of key repeat
   command: defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
-- name: Set a blazingly fast keyboard repeat rate
+- name: Setting a blazingly fast keyboard repeat rate
   command: defaults write NSGlobalDomain KeyRepeat -int 0.02
 
-- name: Set a shorter Delay until key repeat
+- name: Setting a shorter Delay until key repeat
   command: defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
-- name: Enable AirDrop over Ethernet and on unsupported Macs running Lion
+- name: Enabling AirDrop over Ethernet and on unsupported Macs running Lion
   command: defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
-- name: Avoid creating .DS_Store files on network volumes
+- name: Avoiding creating .DS_Store files on network volumes
   command: defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
-- name: Require password immediately after sleep or screen saver begins - PART I
+- name: Requiring password immediately after sleep or screen saver begins - Part I
   command: defaults write com.apple.screensaver askForPassword -int 1
 
-- name: Require password immediately after sleep or screen saver begins - PART II
+- name: Requiring password immediately after sleep or screen saver begins - Part II
   command: defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-- name: Enable tap to click (Trackpad) - PART II
+- name: Enabling tap to click (Trackpad) - Part I
   command: defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-- name: Enable tap to click (Trackpad) - PART III
+- name: Enabling tap to click (Trackpad) - Part II
   command: defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-- name: Enable tap to click (Trackpad) - PART I
+- name: Enabling tap to click (Trackpad) - PART III
   command: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 
-- name: Only use UTF-8 in Terminal.app
-  command: defaults write com.apple.terminal StringEncodings -array 4
-
-- name: Enable Fn keys
+- name: Enabling Fn keys
   command: defaults write -g com.apple.keyboard.fnState -boolean true
 
-- name: Change computer name
+- name: Changing computer name
   command: scutil --set HostName duck-of-doom

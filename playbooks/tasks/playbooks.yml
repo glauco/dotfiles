@@ -1,3 +1,0 @@
----
-- name: Clone/update my dotfiles with the playbooks
-  git: repo=https://github.com/glauco/dotfiles.git dest=~/github/dotfiles

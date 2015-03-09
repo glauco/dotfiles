@@ -1,0 +1,32 @@
+---
+- name: Update Homebrew
+  homebrew: update_homebrew=yes
+
+- name: Install command line utitlities using Homebrew
+  homebrew: name={{ item }} state=latest
+  with_items:
+    - ack
+    - ansible
+    - ant
+    - autoconf
+    - automake
+    - boot2docker
+    - brew-cask
+    - curl
+    - git
+    - gnu-sed
+    - gradle
+    - ivy
+    - maven
+    - node
+    - openssl
+    - postgresql
+    - reattach-to-user-namespace
+    - sqlite
+    - tmux
+    - tomcat
+    - tree
+    - unrar
+    - wget
+    - zsh-completions
+

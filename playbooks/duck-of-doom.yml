@@ -1,0 +1,11 @@
+---
+- hosts: targets
+  tasks:
+    - include: tasks/command-line-apps.yml
+    - include: tasks/dotfiles.yml
+    - include: tasks/mac-os-x-apps.yml
+    - include: tasks/mac-os-x-configurations.yml
+    - include: tasks/mac-os-x-software-updates.yml
+    - include: tasks/ruby.yml
+    - include: tasks/vim.yml
+    - include: tasks/zsh.yml

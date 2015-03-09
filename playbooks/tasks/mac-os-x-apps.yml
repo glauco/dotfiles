@@ -1,0 +1,25 @@
+---
+- name: Updating Homebrew
+  homebrew: update_homebrew=yes
+
+- name: Adding Homebrew Cask tap
+  action: shell brew tap caskroom/cask
+
+- name: Adding support for Cask beta apps
+  homebrew_tap: tap=caskroom/versions state=present
+
+- name: Installing Mac OS X apps using Homebrew Cask
+  homebrew_cask: name={{ item }} state=present
+  with_items:
+    - 1password
+    - dropbox
+    - eclipse-ide
+    - firefox
+    - google-chrome
+    - intellij-idea
+    - iterm2
+    - skitch
+    - transmission
+    - virtualbox
+    - vagrant
+    - vagrant-manager
