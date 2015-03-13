@@ -8,4 +8,5 @@
     - include: tasks/mac-os-x-software-updates.yml
     - include: tasks/ruby.yml
     - include: tasks/vim.yml
+    - include: tasks/mysql.yml
     - include: tasks/zsh.yml

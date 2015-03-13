@@ -1,0 +1,6 @@
+---
+- name: Updating Homebrew
+  homebrew: update_homebrew=yes
+
+- name: Installing mysql
+  homebrew: name=mysql state=latest

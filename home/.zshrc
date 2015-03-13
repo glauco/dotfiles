@@ -12,6 +12,8 @@ fi
 
 # Customize to your needs...
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
@@ -26,7 +28,7 @@ export DOCKER_HOST=tcp://192.168.59.103:2375
 alias p=pushd
 alias o=popd
 
-export COMMANDER_SERVER="commander.gapinc.dev"
+export COMMANDER_SERVER="commanderserver.gapinc.dev"
 
 PATH="$PATH:/opt/electriccloud/electriccommander/bin"
 PATH="/usr/local/bin:$PATH"
